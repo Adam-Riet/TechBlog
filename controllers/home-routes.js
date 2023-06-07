@@ -27,6 +27,8 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+
 // GET one gallery
 router.get('/gallery/:id', async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
@@ -86,6 +88,18 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/dashboard', (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+    return;
+  }
+
+  res.render('dashboard', {
+    isDashboard: true,
+    loggedIn: req.session.loggedIn,
+  });
 });
 
 module.exports = router;
