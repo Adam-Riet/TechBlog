@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/project/:id', withAuth, async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
       include: [
@@ -44,7 +44,7 @@ router.get('/project/:id', async (req, res) => {
     res.render('project', {
       ...project,
       logged_in: req.session.logged_in,
-      title: 'Dashboard'
+      title: 'Comments'
     });
   } catch (err) {
     res.status(500).json(err);
