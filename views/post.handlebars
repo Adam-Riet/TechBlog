@@ -12,16 +12,16 @@
     {{#each comments as |comment| }}
       <div class="comment">
         <p>{{comment.comment_text}}</p>
-        <p>Commented by {{comment.user.name}} on {{format_date comment.date_created}}</p>
+        <p>Commented by {{comment.user.name}} on {{format_date comment.createdAt}}</p>
       </div>
     {{/each}}
-    <form class="comment-form">
-      <textarea id="comment-text" name="comment" rows="4" cols="50"></textarea>
-      <input type="hidden" id="post-id" value="{{id}}">
-      <div class="text-center">
-        <button class="btn btn-primary" type="submit">Leave a comment!</button>
-      </div>
-    </form>
+   <form class="comment-form" action="/api/comments" method="POST">
+  <textarea id="comment-text" name="comment_text" rows="4" cols="50"></textarea>
+  <input type="hidden" id="post-id" name="post_id" value="{{id}}">
+  <div class="text-center">
+    <button class="btn btn-primary" type="submit">Leave a comment!</button>
+  </div>
+</form>
   </div>
 </div>
 
