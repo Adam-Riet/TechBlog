@@ -2,14 +2,14 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#post-name').value.trim();
-  // Remove needed_funding
+  
   const description = document.querySelector('#post-desc').value.trim();
 
-  // Check for name and description only
+ 
   if (name && description) {
     const response = await fetch(`/api/posts`, {
       method: 'POST',
-      // Remove needed_funding from the request body
+      
       body: JSON.stringify({ name, description }),
       headers: {
         'Content-Type': 'application/json',
