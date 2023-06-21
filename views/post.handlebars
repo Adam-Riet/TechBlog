@@ -8,10 +8,10 @@
   </div>
   <div class="post-comments text-center">
     <h3>Comments</h3>
-    <!-- Assuming comments is an array with each comment as an object -->
+   
     {{#each comments as |comment| }}
       <div class="comment">
-        <p>{{comment.text}}</p>
+        <p>{{comment.comment_text}}</p>
         <p>Commented by {{comment.user.name}} on {{format_date comment.date_created}}</p>
       </div>
     {{/each}}
