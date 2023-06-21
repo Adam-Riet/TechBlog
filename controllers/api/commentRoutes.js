@@ -21,38 +21,4 @@ router.post('/comments', withAuth, async (req, res) => {
   }
 });
 
-// router.get('/posts/:id', withAuth, async (req, res) => {
-//   try {
-//     const postData = await Post.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['name'],
-//         },
-//         {
-//           model: Comment, // Also include the comments
-//           include: [
-//             {
-//               model: User, // Include user details for each comment
-//               attributes: ['name'],
-//             },
-//           ],
-//         },
-//       ],
-//     });
-
-//     const post = postData.get({ plain: true });
-
-//     console.log(post);
-    
-//     res.render('post', {
-//       ...post,
-//       logged_in: req.session.logged_in,
-//       title: 'Comments'
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 module.exports = router;
