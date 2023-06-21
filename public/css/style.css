@@ -2,6 +2,37 @@ header, .post:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
+.column-direction {
+  flex-direction: column;
+}
+
+.h1-shadow-box {
+  padding: 10px;
+  border: 1px solid #888;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.post {
+  background: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.post-header {
+  background: #eee; /* This will give the post header a different background color. */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.post-body {
+  margin-top: 10px;
+}
+
+
 .no-button {
   background: none;
   border: none;
