@@ -1,0 +1,10 @@
+[
+    {
+      "name": "Why MVC is so important",
+      "description": "MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the View layer for design, and the Controller layer for application logic."
+    },
+    {
+      "name": "Object-Relational Mapping",
+      "description": "I have really loved learning about ORMs. It's really simplified the way I think about databases and how to interact with them. I've been using Sequelize for my projects and it's been a great experience."
+    }
+  ]
