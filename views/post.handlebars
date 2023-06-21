@@ -5,7 +5,6 @@
   </div>
   <div class="post-body text-center">
     <p>{{description}}</p>
-    <button class="btn btn-primary">Leave a comment!</button>
   </div>
   <div class="post-comments text-center">
     <h3>Comments</h3>
@@ -16,6 +15,14 @@
         <p>Commented by {{comment.user.name}} on {{format_date comment.date_created}}</p>
       </div>
     {{/each}}
+    <form class="comment-form">
+      <textarea id="comment-text" name="comment" rows="4" cols="50"></textarea>
+      <input type="hidden" id="post-id" value="{{id}}">
+      <div class="text-center">
+        <button class="btn btn-primary" type="submit">Leave a comment!</button>
+      </div>
+    </form>
   </div>
 </div>
+
 
